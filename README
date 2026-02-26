@@ -1,0 +1,177 @@
+Real-Time Waste Classification & Carbon Impact Monitoring
+
+An AI-powered real-time waste classification system built for Hack For Green Bharat.
+
+This project uses Deep Learning + FastAPI + Pathway streaming to classify waste images and monitor waste trends in real-time.
+
+🚀 Live Demo
+
+🔗 Backend API (Render):
+https://hack-for-green-bharat-wx1i.onrender.com
+
+🔗 API Documentation (Swagger):
+https://hack-for-green-bharat-wx1i.onrender.com/docs
+
+🔗 Frontend (Vercel):
+(Add your Vercel URL here)
+
+🎯 Problem Statement
+
+Improper waste segregation leads to:
+
+Increased landfill overflow
+
+Higher carbon emissions
+
+Environmental pollution
+
+Poor recycling efficiency
+
+There is a need for an intelligent, real-time system that:
+
+Automatically classifies waste
+
+Tracks waste generation trends
+
+Enables carbon impact estimation
+
+Supports sustainability decisions
+
+🧠 Solution Overview
+
+Green AI is a real-time intelligent waste monitoring system that:
+
+Accepts waste image uploads
+
+Uses a Deep Learning model (ResNet18) for classification
+
+Logs predictions into a streaming pipeline
+
+Uses Pathway for real-time aggregation
+
+Displays live waste distribution statistics
+
+(Optional) Estimates carbon impact
+
+🏗️ System Architecture
+
+Frontend (Vercel)
+⬇
+FastAPI Backend (Render)
+⬇
+AI Waste Classification Model (PyTorch – ResNet18)
+⬇
+Waste Log (CSV)
+⬇
+Pathway Real-Time Streaming Engine
+⬇
+Live Aggregated Dashboard Data
+
+🛠️ Tech Stack
+AI / ML
+
+PyTorch
+
+ResNet18 (Fine-tuned)
+
+Custom Waste Dataset (6 Classes)
+
+Backend
+
+FastAPI
+
+Uvicorn
+
+Python
+
+python-multipart
+
+Real-Time Processing
+
+Pathway (Streaming & Aggregation Engine)
+
+Frontend
+
+HTML / JavaScript (Deployed on Vercel)
+
+Deployment
+
+Render (Backend + Pathway Worker)
+
+Vercel (Frontend)
+
+♻️ Waste Categories
+
+The model classifies waste into:
+
+Organic
+
+Recyclable
+
+Hazardous
+
+Plastic
+
+Metal
+
+Glass
+
+🔁 Real-Time Streaming Flow
+
+User uploads image
+
+Backend predicts waste type
+
+Prediction appended to waste_log.csv
+
+Pathway continuously monitors file
+
+Real-time aggregation updates counts
+
+Dashboard reflects updated statistics
+
+📦 Installation (Local Development)
+1️⃣ Clone Repository
+git clone https://github.com/YOUR_USERNAME/green-ai.git
+cd green-ai
+2️⃣ Create Virtual Environment
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+4️⃣ Run Backend
+uvicorn backend.app:app --reload
+
+Open:
+http://127.0.0.1:8000/docs
+
+5️⃣ Run Pathway Streaming
+python pathway_pipeline/stream.py
+🌍 Deployment
+Backend + Pathway
+
+Deployed on Render (Linux environment)
+
+Start Command:
+
+uvicorn backend.app:app --host 0.0.0.0 --port 10000
+
+Background Worker:
+
+python pathway_pipeline/stream.py
+Frontend
+
+Deployed on Vercel
+
+🔮 Future Enhancements
+
+Carbon emission estimation per waste type
+
+Sustainability recommendation engine
+
+Live dashboard visualization (React)
+
+IoT integration for smart bins
+
+Municipal-level analytics
